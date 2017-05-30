@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>My Trove</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="#" title="" class="logo pull-left"><img src="img/logo.jpg" alt=""></a>
+        <nav class="links pull-left">
+          <a href="#" title="my service providers">my service providers</a>
+          <a href="#" class="active" title="my finances">my finances</a>
+          <a href="#" title="my documents">my documents</a>
+        </nav>
+        <nav class="action pull-right">
+          <a href="#" title="send feedback"><img src="img/icon-feedback.png"><span>send feedback</span></a>
+          <a href="#" title="save &amp; exit" class="save"><img src="img/icon-saveandexit.png"><span>save &amp; exit</span></a>
+        </nav>
+      </header>
+      <section class="main">
+        <form>
+          <table class="table table-striped">
+          <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Account/Reference Number</th>
+            <th>Files</th>
+            <th></th>
+          </tr>
+          <tr>
+            <td>Bank Account</td>
+            <td>Westpac</td>
+            <td>03-0123-0000-00</td>
+            <td><img src="img/icon-pdf.png"></td>
+            <td class="text-right"><a href="#" title="delete"><img src="img/icon-delete.png"></a></td>
+          </tr>
+          <tr>
+            <td>Insurance Policy</td>
+            <td>State Insurance</td>
+            <td>AB123456</td>
+            <td><img src="img/icon-pdf.png"></td>
+            <td class="text-right"><a href="#" title="delete"><img src="img/icon-delete.png"></a></td>
+          </tr>
+          <tr>
+            <td>Kiwisaver</td>
+            <td>AMP</td>
+            <td>5496-6300-00000-000</td>
+            <td><img src="img/icon-pdf.png"></td>
+            <td class="text-right"><input type="button" value="save" class="vsmall-btn"></td>
+          </tr>          
+          </table>
+          <div class="row action-row hidden">
+            <div class="col-md-4">            
+            </div>
+            <div class="col-md-4 text-center relative"> 
+              <input type="file">
+              <input type="button" value="add another" class="medium-btn">      
+            </div>
+            <div class="col-md-4 text-right"> 
+              <input type="submit" value="save and continue" class="small-btn">           
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
