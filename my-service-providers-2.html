@@ -34,7 +34,8 @@
       </header>
       <section class="main">
         <form>
-          <table class="table table-striped">
+          <div class="table-responsive">
+<table class="table table-striped">
           <tr>
             <th>Type</th>
             <th>Name</th>
@@ -43,56 +44,72 @@
             <th></th>
           </tr>
           <tr>
-            <td>Govt</td>
+            <td><select>
+            	<option selected="">Government</option>
+            	<option>Power</option>
+            	<option>Phone</option>
+            	<option>Internet Service</option>
+            	<option>Rates</option>
+            	<option>Other</option>
+            </select></td>
             <td>Inland revenue</td>
             <td>10231.32103.21</td>
             <td><img src="img/icon-pdf.png"></td>
             <td class="text-right"><a href="#" title="delete"><img src="img/icon-delete.png"></a></td>
           </tr>
           <tr>
-            <td>Govt</td>
+            <td><select>
+            	<option selected="">Government</option>
+            	<option>Power</option>
+            	<option>Phone</option>
+            	<option>Internet Service</option>
+            	<option>Rates</option>
+            	<option>Other</option>
+            </select></td>
             <td>Ministry of Health</td>
             <td>32131.231</td>
             <td><img src="img/icon-pdf.png"></td>
             <td class="text-right"><a href="#" title="delete"><img src="img/icon-delete.png"></a></td>
           </tr>  
           <tr class="uploading">
-            <td>
-
-                <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
-                        Tutorials
-                        <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-                        <li role="presentation"><a role="menuitem" href="#">HTML</a></li>
-                        <li role="presentation"><a role="menuitem" href="#">CSS</a></li>
-                        <li role="presentation"><a role="menuitem" href="#">JavaScript</a></li>
-                        <li role="presentation" class="divider"></li>
-                        <li role="presentation"><a role="menuitem" href="#">About Us</a></li>
-                    </ul>
-                </div> 
-
-            </td>
-            <td>Name</td>
-            <td>Customer/Reference Number</td>
+            <td><select>
+            	<option>Government</option>
+            	<option selected="">Power</option>
+            	<option>Phone</option>
+            	<option>Internet Service</option>
+            	<option>Rates</option>
+            	<option>Other</option>
+            </select></td>
+            <td><input type="text" class="table" placeholder="Name"></td>
+            <td><input type="text" class="table" placeholder="Customer/Reference Number"></td>
             <td><img src="img/icon-uploading.png"></td>
             <td class="text-right"><input type="button" value="save" class="vsmall-btn"></td>
           </tr>          
-          </table>
+          <div class="table-responsive">
+</table></div>
           <div class="row action-row hidden">
-            <div class="col-md-4">            
+            <div class="col-sm-4">            
             </div>
-            <div class="col-md-4 text-center relative"> 
+            <div class="col-sm-4 text-center relative"> 
               <input type="file">
               <input type="button" value="add another" class="medium-btn">      
             </div>
-            <div class="col-md-4 text-right"> 
+            <div class="col-sm-4 text-right"> 
               <input type="submit" value="save and continue" class="small-btn">           
             </div>
           </div>
         </form>
       </section>
     </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script>
+      $(function(){
+        var $uploadingRow = $('.uploading');
+        $uploadingRow.find('select').on('change', function(){
+          $("tr.uploading td").css("color", "#AAA6A1");
+        })
+      })
+      </script>
   </body>
 </html>

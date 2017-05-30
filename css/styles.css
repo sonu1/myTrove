@@ -9,8 +9,7 @@ body {
 	padding: 0px;
 	padding-bottom: 45px;	
 	background-color: #fff;
-	margin-top: 50px;
-	margin-bottom: 50px;
+	margin: 20px;
 	border: 1px solid #98948F;
 	border-radius: 10px;
 	-webkit-box-shadow: 0px 0px 30px 0px rgba(152,148,143,1);
@@ -18,24 +17,53 @@ body {
   box-shadow: 0px 0px 30px 0px rgba(152,148,143,1);
   overflow: hidden;
 }
+.scroll {
+	overflow: auto;
+	max-height: 500px;
+}
+.container.with-footer  {
+	padding-bottom: 0px;
+}
 .action-row {
 	padding: 0 45px;
+}
+.action-row input {
+	margin-bottom: 20px;
 }
 header {
 	border-bottom: 1px solid #ccc;
 	overflow: hidden;
 }
+footer {
+	border-top: 1px solid #ccc;
+	overflow: hidden;
+	padding: 30px 45px;
+}
+footer p {
+	padding-top: 20px;
+	margin-right: 20px;
+	font-weight: normal;
+}
+.footer-links a {
+	margin-right: 20px;
+}
 .logo {
-	margin: 45px;
+	margin: 20px 0;
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+nav.links {
+	width: 100%;
+	text-align: center;
 }
 .links a {
-	padding: 45px 30px;
+	padding: 10px;
 	text-transform: uppercase;
 	color: #51514E;
-	font-size: 20px;
+	font-size: 14px;
 	font-weight: bold;
-	width: 185px;
-	display: inline-block;
+	display: block;
 	text-decoration: none;
 }
 .links a.active {
@@ -46,7 +74,7 @@ header {
   color: #fff;
 }
 .action {
-	margin: 45px 35px	;
+	margin: 20px 20px 0 0;
 }
 .action a {
 	font-size: 8px;
@@ -112,6 +140,20 @@ input[type="text"].small, textarea.small, input[type="password"].small {
 .small:-moz-placeholder { /* Firefox 18- */
   color: #00A8BD;
 }
+input[type="text"].table, textarea.table, input[type="password"].table {
+	border: 0;
+	border-radius: 0;
+	padding:0;
+	font-size: 18px;
+	color: #9C9893;
+	width: 100%;
+}
+.table select {
+	border: 0;
+	border-radius: 0;
+	padding: 0;
+	background-color: transparent;
+}
 textarea {
 	height: 240px;
 }
@@ -129,6 +171,7 @@ input[type="button"], input[type="submit"], a.btn {
 }
 a.btn {
 	text-transform: none;
+	white-space: normal;
 }
 .full-width {
 	width: 100%;
@@ -189,6 +232,19 @@ td {
 tr.uploading td {
 	color: #EDEBE9;
 }
+
+tr.uploading .table::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #EDEBE9;
+}
+tr.uploading .table::-moz-placeholder { /* Firefox 19+ */
+  color: #EDEBE9;
+}
+tr.uploading .table:-ms-input-placeholder { /* IE 10+ */
+  color: #EDEBE9;
+}
+tr.uploading .table:-moz-placeholder { /* Firefox 18- */
+  color: #EDEBE9;
+}
 .table>tbody>tr>td, .table>tbody>tr>th {
 	border: 0;
 	border-left: 1px solid #ccc;
@@ -206,23 +262,11 @@ table tr td:last-child, table tr th:last-child {
 	padding-left: 0;
 	border: 0;
 }
-.content {
-	padding: 50px 175px;
-}
-.content2 {
-	padding: 50px 230px;
-}
-.content3 {
-	padding: 20px 230px;
-}
-.login header {
+.no-nav header {
 	border-bottom: 0;
-	padding-top: 130px;
+	padding-top: 20px;
 }
-.left-border {
-	border-left: 1px solid #333;
-	padding-left: 40px;
-}
+
 .payment-box {
 	border-radius: 10px;
 	-webkit-box-shadow: 0px 0px 30px 0px rgba(152,148,143,1);
@@ -245,3 +289,119 @@ table tr td:last-child, table tr th:last-child {
 .bottom-space {
 	margin-bottom: 40px;
 }
+
+.content {
+	padding: 20px;
+}
+.content2 {
+	padding: 20px;
+}
+.content3 {
+	padding: 20px;
+}
+.content4 {
+	padding: 20px;
+}
+
+.top-space-mobile {
+	margin-top: 20px;
+}
+dl {
+	font-size: 18px;
+	color: #9C9893;
+	margin-bottom: 5px;
+}
+dl.bold {
+	font-weight: bold;
+}
+dl.non-bold {
+	font-weight: normal;
+}
+dl.non-bold dt {
+	font-weight: normal;
+}
+.dl-horizontal dt {
+	text-align: left;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {	
+	.no-nav header {
+		border-bottom: 0;
+		padding-top: 50px;
+	}
+	.content {
+		padding: 50px;
+	}
+	.content2 {
+		padding: 50px;
+	}
+	.content3 {
+		padding: 20px 50px;
+	}
+	.content4 {
+		padding: 20px 45px;
+	}
+	.left-border {
+		border-left: 1px solid #333;
+		padding-left: 40px;
+	}
+	.top-space-mobile {
+		margin-top: 0;
+	}
+	.container {
+		margin: 20px auto;
+	}
+	.logo {
+		margin: 45px;
+		width: auto;
+		display: inline-block;
+	}	
+	nav.links {
+		width: auto;
+	}
+	.links a {
+		padding: 45px 30px;
+		font-size: 20px;
+		width: 185px;
+		display: inline-block;
+	}
+	.action {
+		margin: 20px 45px 20px 0;
+	}
+	.action-row input {
+		margin-bottom: 0;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	.no-nav header {
+		border-bottom: 0;
+		padding-top: 100px;
+	}
+	.content {
+		padding: 50px 175px;
+	}
+	.content2 {
+		padding: 50px 230px;
+	}
+	.content3 {
+		padding: 20px 230px;
+	}
+	.content4 {
+		padding: 20px 45px;
+	}
+	.action {
+		margin: 45px 35px	;
+	}
+}
+@media print
+ {
+    header {
+    	display: none;
+    }
+ }

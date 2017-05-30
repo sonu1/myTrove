@@ -34,7 +34,8 @@
       </header>
       <section class="main">
         <form>
-          <table class="table table-striped">
+          <div class="table-responsive">
+<table class="table table-striped">
           <tr>
             <th>Type</th>
             <th>Name</th>
@@ -43,28 +44,45 @@
             <th></th>
           </tr>
           <tr>
-            <td>Bank Account</td>
+            <td><select>
+              <option value="bankAccount" selected="">Bank Account</option>
+              <option value="insurancePolicy">Insurance Policy</option>
+              <option value="kiwisaver">Kiwisaver</option>
+              <option value="creditCard">Credit Card</option>
+              <option value="termDeposit">Term Deposit</option>
+              <option value="shares">Shares</option>
+              <option value="other">Other</option>
+            </select></td>
             <td>Westpac</td>
             <td>03-0123-0000-00</td>
             <td><img src="img/icon-pdf.png"></td>
             <td class="text-right"><a href="#" title="delete"><img src="img/icon-delete.png"></a></td>
           </tr>
           <tr>
-            <td>Insurance Policy</td>
+            <td><select>
+              <option value="bankAccount">Bank Account</option>
+              <option value="insurancePolicy" selected="">Insurance Policy</option>
+              <option value="kiwisaver">Kiwisaver</option>
+              <option value="creditCard">Credit Card</option>
+              <option value="termDeposit">Term Deposit</option>
+              <option value="shares">Shares</option>
+              <option value="other">Other</option>
+            </select></td>
             <td>State Insurance</td>
             <td>AB123456</td>
             <td><img src="img/icon-pdf.png"></td>
             <td class="text-right"><a href="#" title="delete"><img src="img/icon-delete.png"></a></td>
           </tr>          
-          </table>
+          <div class="table-responsive">
+</table></div>
           <div class="row action-row">
-            <div class="col-md-4">            
+            <div class="col-sm-4">            
             </div>
-            <div class="col-md-4 text-center relative"> 
+            <div class="col-sm-4 text-center relative"> 
               <input type="file">
               <input type="button" value="add another" class="medium-btn">      
             </div>
-            <div class="col-md-4 text-right"> 
+            <div class="col-sm-4 text-right"> 
               <input type="submit" value="save and continue" class="small-btn">           
             </div>
           </div>
